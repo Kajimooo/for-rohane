@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #ff6b6b;
+  margin-top: 20px;
+}
+
+h4 {
+  font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; 
+  line-height: 26.4px; 
+  position: relative;
+  top: -90px;
+}
+
+#vinyl-container {
+  display: inline-block;
+  margin-top: 50px;
+  position: absolute;
+}
+
+svg {
+  height: 700px;
+  width: 900px;
+}
+
+.record-player {
+  display: flex;
+  flex-direction: column;  /* Stack SVG and button vertically */
+  align-items: center;    /* Center the button and SVG horizontally */
+  text-align: center;
+}
+
+#player-container {
+  display: flex;
+  align-items: center;  /* Vertically center the SVGs */
+  justify-content: center;  /* Horizontally center the SVGs */
+  gap: 20px; /* Adds space between the two SVGs */
+}
+
+#play-button,#second-button{
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #bc4749;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  top: -90px;
+}
+
+#play-button:hover, #second-button:hover {
+  background-color: #c1121f ;
+}
+
+#side-svg-container {
+  position: absolute;  /* Places it on top */
+  top: 0; /* Adjust this to position properly */
+  left: 48%; /* Centers horizontally */
+  transform: translateX(-50%); /* Centers exactly */
+  z-index: 2; /* Ensures it's above the vinyl */
+  pointer-events: none; /* Prevents interfering with clicks */
+  height: 500px;
+  width: 500px;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 10s linear infinite;
+  animation-play-state: running;
+}
+
+@media only screen and (max-width: 550px) and (min-width: 400px) {
+  #side-svg-container {
+    left: 40%;
+  }
+}
+
+@media only screen and (max-width: 700px) and (min-width: 550px) {
+  #side-svg-container {
+    left: 42%;
+  }
+}
+
+@media only screen and (max-width: 850px) and (min-width: 700px) {
+  #side-svg-container {
+    left: 44%;
+  }
+}
+
+@media only screen and (max-width: 950px) and (min-width: 850px) {
+  #side-svg-container {
+    left: 46%;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 950px) {
+  #side-svg-container {
+    left: 45%;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 1100px) {
+  #side-svg-container {
+    left: 46%;
+  }
+}
+
+#button-container {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  justify-content: center; /* Center them horizontally */
+}
+
