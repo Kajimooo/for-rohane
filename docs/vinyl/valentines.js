@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  fetch("./vinyl.svg")
+  fetch("./Vinyl.svg")
     .then((response) => response.text())
     .then((svg) => {
       const playerContainer = document.getElementById("player-container");
